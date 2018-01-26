@@ -15,7 +15,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right" style="padding-bottom : 0px">
                         <li><a href="/encuesta/estudiante/index"><span class=" glyphicon glyphicon-home" style="font-size: 24px;"></span></a></li>
-                        <li><a href="/encuesta/user/logout"><span class=" glyphicon glyphicon-log-out" style="font-size: 24px;"></span></a></li>
+                        <li><a href="../login/logout"><span class=" glyphicon glyphicon-log-out" style="font-size: 24px;"></span></a></li>
                         <li><%= image_tag('Engineer.png', :size => '60x60') %></li>
                     </ul>
                 </div>
@@ -49,7 +49,7 @@
                           </div>
                           <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                               <div class="panel-body">
-							     Encuestas realizadas: ${encuesta.Encuesta.findAllByEstudiante(session.user).size()}
+							     Encuestas realizadas: <%= Encuestum.where(student: Student.where(token: session[:token]).first.code ).count %>
                               </div>
                           </div>
                       </div>
@@ -99,7 +99,7 @@
                                             <label for="inputName" class="col-lg-2 control-label">Nombre</label>
                                             <div class="col-lg-10">
 
-                                            <select id="nombre" name="profe" optionKey="profesor" optionValue="profesor" required="" class="many-to-one">
+                                            <select id="nombre" name="profe" optionKey="profesor" optionValue="profesor" required="" class="many-to-one form-control">
                                               <% @proffesors.each do |profesor| %>
                                               <option><%= profesor.profesor %></option>
                                               <% end %>
@@ -109,6 +109,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-lg-10 col-lg-offset-2">
+                                              <br><br>
                                                 <button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                                                 <button type="submit" class="btn btn-primary">Seleccionar</button>
                                             </div>

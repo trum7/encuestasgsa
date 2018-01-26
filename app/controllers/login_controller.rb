@@ -9,11 +9,13 @@ class LoginController < ApplicationController
 
   def validate
 
-    @code = params["username"]
+    code = params["username"]
     @password = params["password"]
+    p "aca"
+    p code
+    p "aca consulta"
+    @student = Student.find_by(code: code)
 
-    @student = Student.where(code: @code).first
-    puts  @student.code
     if @student != nil and @student.code.to_s == @password
 
       puts "Siiiiiiii"
@@ -29,10 +31,17 @@ class LoginController < ApplicationController
 
     else
 
-      puts "Noooooooo"
+      redirect_to root_path, notice => "Datos incorrectos"
 
     end
 
+  end
+
+  def logout
+    user = Student.where(token: session[:token]).first
+    user.token = nil
+    user.save
+    redirect_to root_path
   end
 
 
