@@ -1,10 +1,11 @@
 class ApplicationController < ActionController::Base
+
   protect_from_forgery with: :exception
 
   helper_method :current_user
 
   def current_user
-    puts session[:token]
+
     if session[:token]
       @current_user = Student.find_by(token: session[:userToken])
     else
@@ -19,8 +20,12 @@ class ApplicationController < ActionController::Base
   end
 
   def require_admin
-    puts current_user
-    if current_user == nil or current_user.level != 4
+    @current_user = Student.find_by(token: session[:userToken])
+    puts "El nivel es:"
+    puts @current_user.level
+    puts @current_user.name
+    puts "-----------------"
+    if @current_user == nil or @current_user.level != 4
       redirect_to root_path
     end
   end

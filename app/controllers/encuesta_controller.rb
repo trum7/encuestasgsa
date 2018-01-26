@@ -1,11 +1,28 @@
 class EncuestaController < ApplicationController
   before_action :set_encuestum, only: [:show, :edit, :update, :destroy]
+  before_action :require_admin, only: [:index]
   protect_from_forgery with: :null_session
 
   # GET /encuesta
   # GET /encuesta.json
   def index
+    @encuestas = Encuestum.all
 
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @encuestas.to_csv, filename: "encuestas-#{Date.today}.csv" }
+    end
+  end
+
+  def download
+    @encuestas = Encuestum.all
+    @import = Encuestum::Import.new
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @encuestas.to_csv, filename: "encuestas-#{Date.today}.csv" }
+    end
   end
 
   def encuesta
@@ -56,8 +73,8 @@ class EncuestaController < ApplicationController
     @encuesta.bueno = params[:bueno]
     @encuesta.mejorar = params[:mejorar]
     @encuesta.student = @active.code
-    @encuesta.profesor = session[:profesor]
-    @encuesta.subject = session[:subject]
+    @encuesta.profesor = params[:profesor]
+    @encuesta.subject = params[:subject]
 
     @encuesta.save
 
