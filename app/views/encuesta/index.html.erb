@@ -1,0 +1,377 @@
+<p id="notice"><%= notice %></p>
+
+<script>
+  function enviarforms(){
+   if(     document.formulario1.p1.value === "0" ||
+		   document.formulario1.p2.value === "0" ||
+		   document.formulario1.p3.value === "0" ||
+		   document.formulario1.p4.value === "0" ||
+		   document.formulario1.p5.value === "0" ||
+		   document.formulario1.p6.value === "0" ||
+		   document.formulario1.p7.value === "0" ||
+		   document.formulario1.p8.value === "0" ||
+		   document.formulario1.p9.value === "0" ||
+		   document.formulario1.p10.value === "0" ||
+		   document.formulario1.p11.value === "0" ||
+		   document.formulario1.p12.value === "0" ||
+		   document.formulario1.p13.value === "0" ||
+		   document.formulario1.p14.value === "0" ||
+		   document.formulario1.p15.value === "0" ||
+		   document.formulario1.p16.value === "0" ||
+		   document.formulario1.p17.value === "0" ||
+		   document.formulario1.p18.value === "0" ||
+		   document.formulario1.p19.value === "0" ||
+		   document.formulario1.p20.value === "0" ||
+		   document.formulario1.p21.value === "0" ||
+		   document.formulario1.p22.value === "0" ||
+		   document.formulario1.p23.value === "0" ||
+		   document.formulario1.p24.value === "0"
+		   ){
+	   confirm('No has terminado la encuesta');
+   }else{
+	   document.formulario1.submit();
+
+   }
+
+
+  }
+  </script>
+      <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button> -->
+                    <a class="navbar-brand" href="#"> ${ encuesta.Estudiante.findByCodigo(session.user).nombre } </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right" style="padding-bottom : 0px">
+                        <li><a href="/encuesta/estudiante/index"><span class=" glyphicon glyphicon-home" style="font-size: 24px;"></span></a></li>
+                        <li><a href="/encuesta/user/logout"><span class=" glyphicon glyphicon-log-out" style="font-size: 24px;"></span></a></li>
+                        <li><img src="${assetPath(src: 'Engineer.png')}" rel="images" style="height: 50px; width : 50px; margin : 10px"></img></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container">
+            <g:form name="formulario1" method="POST" controller="estudiante" action="realizado1" >
+             <table  class="table table-bordered prueba"  >
+
+				<thead >
+					<tr>
+					   <br>
+						<g:sortableColumn property="pregunta" title="${message(code: 'trip.city.label', default: 'Numero')}" />
+					    <g:sortableColumn property="pregunta" title="${message(code: 'trip.city.label', default: 'Pregunta')}" />
+						<g:sortableColumn property="opcion1" title="${message(code: 'trip.numberoftrips.label', default: 'Siempre')}" />
+						<g:sortableColumn property="opcion2" title="${message(code: 'trip.numberoftrips.label', default: 'Casi siempre')}" />
+						<g:sortableColumn property="opcion3" title="${message(code: 'trip.numberoftrips.label', default: 'Algunas veces')}" />
+						<g:sortableColumn property="opcion4" title="${message(code: 'trip.numberoftrips.label', default: 'Nunca')}" />
+						<g:sortableColumn property="opcion5" title="${message(code: 'trip.numberoftrips.label', default: '0')}" />
+					</tr>
+				</thead>
+
+
+				<tbody>
+
+
+
+                   <tr>
+
+
+                         <td>1</td>
+                         <td>Respeta las diferencias individuales.</td>
+                         <td><input type="radio" name="p1" value="4"> </td>
+                         <td><input type="radio" name="p1" value="3"> </td>
+                         <td><input type="radio" name="p1" value="2"></td>
+                         <td><input type="radio" name="p1" value="1"></td>
+                         <td><input type="radio" name="p1" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>2</td>
+                         <td>Es justo y honesto con sus apreciaciones y opiniones.</td>
+                         <td><input type="radio" name="p2" value="4"> </td>
+                         <td><input type="radio" name="p2" value="3"> </td>
+                         <td><input type="radio" name="p2" value="2"></td>
+                         <td><input type="radio" name="p2" value="1"></td>
+                         <td><input type="radio" name="p2" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>3</td>
+                         <td>Apoya a los educandos que requieren de su ayuda.</td>
+                         <td><input type="radio" name="p3" value="4"> </td>
+                         <td><input type="radio" name="p3" value="3"> </td>
+                         <td><input type="radio" name="p3" value="2"></td>
+                         <td><input type="radio" name="p3" value="1"></td>
+                         <td><input type="radio" name="p3" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>4</td>
+                         <td>Establece relaciones cordiales con los educandos.</td>
+                         <td><input type="radio" name="p4" value="4"> </td>
+                         <td><input type="radio" name="p4" value="3"> </td>
+                         <td><input type="radio" name="p4" value="2"></td>
+                         <td><input type="radio" name="p4" value="1"></td>
+                         <td><input type="radio" name="p4" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>5</td>
+                         <td>Controla sus expresiones emocionales.</td>
+                         <td><input type="radio" name="p5" value="4"> </td>
+                         <td><input type="radio" name="p5" value="3"> </td>
+                         <td><input type="radio" name="p5" value="2"></td>
+                         <td><input type="radio" name="p5" value="1"></td>
+                         <td><input type="radio" name="p5" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>6</td>
+                         <td>Escucha sugerencias y plantea soluciones.</td>
+                         <td><input type="radio" name="p6" value="4"> </td>
+                         <td><input type="radio" name="p6" value="3"> </td>
+                         <td><input type="radio" name="p6" value="2"></td>
+                         <td><input type="radio" name="p6" value="1"></td>
+                         <td><input type="radio" name="p6" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>7</td>
+                         <td>La comunicación verbal, escrita y corporal se basa en el respeto.</td>
+                         <td><input type="radio" name="p7" value="4"> </td>
+                         <td><input type="radio" name="p7" value="3"> </td>
+                         <td><input type="radio" name="p7" value="2"></td>
+                         <td><input type="radio" name="p7" value="1"></td>
+                         <td><input type="radio" name="p7" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>8</td>
+                         <td>Se expresa con claridad y seguridad.</td>
+                         <td><input type="radio" name="p8" value="4"> </td>
+                         <td><input type="radio" name="p8" value="3"> </td>
+                         <td><input type="radio" name="p8" value="2"></td>
+                         <td><input type="radio" name="p8" value="1"></td>
+                         <td><input type="radio" name="p8" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>9</td>
+                         <td>Brinda ejemplos y respuestas claras.</td>
+                         <td><input type="radio" name="p9" value="4"> </td>
+                         <td><input type="radio" name="p9" value="3"> </td>
+                         <td><input type="radio" name="p9" value="2"></td>
+                         <td><input type="radio" name="p9" value="1"></td>
+                         <td><input type="radio" name="p9" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>10</td>
+                         <td>Demuestra conocimientos actualizados.</td>
+                         <td><input type="radio" name="p10" value="4"> </td>
+                         <td><input type="radio" name="p10" value="3"> </td>
+                         <td><input type="radio" name="p10" value="2"></td>
+                         <td><input type="radio" name="p10" value="1"></td>
+                         <td><input type="radio" name="p10" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>11</td>
+                         <td>Muestra interés por aprender de los demás.</td>
+                         <td><input type="radio" name="p11" value="4"> </td>
+                         <td><input type="radio" name="p11" value="3"> </td>
+                         <td><input type="radio" name="p11" value="2"></td>
+                         <td><input type="radio" name="p11" value="1"></td>
+                         <td><input type="radio" name="p11" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>12</td>
+                         <td>Contribuye con su conocimiento al logro de los objetivos en su clase.</td>
+                         <td><input type="radio" name="p12" value="4"> </td>
+                         <td><input type="radio" name="p12" value="3"> </td>
+                         <td><input type="radio" name="p12" value="2"></td>
+                         <td><input type="radio" name="p12" value="1"></td>
+                         <td><input type="radio" name="p12" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>13</td>
+                         <td>Mantiene excelente presentación personal.</td>
+                         <td><input type="radio" name="p13" value="4"> </td>
+                         <td><input type="radio" name="p13" value="3"> </td>
+                         <td><input type="radio" name="p13" value="2"></td>
+                         <td><input type="radio" name="p13" value="1"></td>
+                         <td><input type="radio" name="p13" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>14</td>
+                         <td>Apoya las celebraciones institucionales.</td>
+                         <td><input type="radio" name="p14" value="4"> </td>
+                         <td><input type="radio" name="p14" value="3"> </td>
+                         <td><input type="radio" name="p14" value="2"></td>
+                         <td><input type="radio" name="p14" value="1"></td>
+                         <td><input type="radio" name="p14" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>15</td>
+                         <td>Muestra interés por el mejoramiento de la calidad educativa.</td>
+                         <td><input type="radio" name="p15" value="4"> </td>
+                         <td><input type="radio" name="p15" value="3"> </td>
+                         <td><input type="radio" name="p15" value="2"></td>
+                         <td><input type="radio" name="p15" value="1"></td>
+                         <td><input type="radio" name="p15" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>16</td>
+                         <td>Conoce y domina los temas de su materia.</td>
+                         <td><input type="radio" name="p16" value="4"> </td>
+                         <td><input type="radio" name="p16" value="3"> </td>
+                         <td><input type="radio" name="p16" value="2"></td>
+                         <td><input type="radio" name="p16" value="1"></td>
+                         <td><input type="radio" name="p16" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>17</td>
+                         <td>Implementa diferentes actividades para fortalecer y motivar el aprendizaje de los educandos.</td>
+                         <td><input type="radio" name="p17" value="4"> </td>
+                         <td><input type="radio" name="p17" value="3"> </td>
+                         <td><input type="radio" name="p17" value="2"></td>
+                         <td><input type="radio" name="p17" value="1"></td>
+                         <td><input type="radio" name="p17" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>18</td>
+                         <td>Diseña planes de mejoramiento con base en los resultados académicos de los educandos.</td>
+                         <td><input type="radio" name="p18" value="4"> </td>
+                         <td><input type="radio" name="p18" value="3"> </td>
+                         <td><input type="radio" name="p18" value="2"></td>
+                         <td><input type="radio" name="p18" value="1"></td>
+                         <td><input type="radio" name="p18" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>19</td>
+                         <td>Utiliza las TIC para enseñar.</td>
+                         <td><input type="radio" name="p19" value="4"> </td>
+                         <td><input type="radio" name="p19" value="3"> </td>
+                         <td><input type="radio" name="p19" value="2"></td>
+                         <td><input type="radio" name="p19" value="1"></td>
+                         <td><input type="radio" name="p19" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>20</td>
+                         <td>Informa a los estudiantes sobre los  logros alcanzados y los pendientes.</td>
+                         <td><input type="radio" name="p20" value="4"> </td>
+                         <td><input type="radio" name="p20" value="3"> </td>
+                         <td><input type="radio" name="p20" value="2"></td>
+                         <td><input type="radio" name="p20" value="1"></td>
+                         <td><input type="radio" name="p20" value="0" checked></td>
+
+                   </tr>
+                   <tr>
+
+                         <td>21</td>
+                         <td>Tiene dominio de grupo y mantiene la disciplina en clase.</td>
+                         <td><input type="radio" name="p21" value="4"> </td>
+                         <td><input type="radio" name="p21" value="3"> </td>
+                         <td><input type="radio" name="p21" value="2"></td>
+                         <td><input type="radio" name="p21" value="1"></td>
+                         <td><input type="radio" name="p21" value="0" checked></td>
+
+                   </tr>
+
+                   <tr>
+
+                         <td>22</td>
+                         <td>Llega puntual a clase y a las actividades programadas.</td>
+                         <td><input type="radio" name="p22" value="4"> </td>
+                         <td><input type="radio" name="p22" value="3"> </td>
+                         <td><input type="radio" name="p22" value="2"></td>
+                         <td><input type="radio" name="p22" value="1" ></td>
+                         <td><input type="radio" name="p22" value="0" checked></td>
+
+                   </tr>
+
+                   <tr>
+
+                         <td>23</td>
+                         <td>Da a conocer oportunamente la programación de las evaluaciones, trabajos, entre otros.</td>
+                         <td><input type="radio" name="p23" value="4"> </td>
+                         <td><input type="radio" name="p23" value="3"> </td>
+                         <td><input type="radio" name="p23" value="2"></td>
+                         <td><input type="radio" name="p23" value="1" ></td>
+                         <td><input type="radio" name="p23" value="0" checked></td>
+
+                   </tr>
+
+                   <tr>
+
+                         <td>24</td>
+                         <td>Califica, devuelve trabajos y evaluaciones a tiempo.</td>
+                         <td><input type="radio" name="p24" value="4"> </td>
+                         <td><input type="radio" name="p24" value="3"> </td>
+                         <td><input type="radio" name="p24" value="2"></td>
+                         <td><input type="radio" name="p24" value="1" ></td>
+                         <td><input type="radio" name="p24" value="0" checked></td>
+
+                   </tr>
+                 </tbody>
+
+				</table>
+
+                   <div class="col-md-12" style="margin-bottom : 3px">
+                      <input class="form-control" id="bueno" name="bueno" placeholder="Consideras que tu docentes es bueno por:" type="text">
+                   </div>
+
+                   <div class="col-md-12" style="margin-bottom : 3px">
+                         <input class="form-control" name="mejorar"  placeholder="Sería mejor docente si:" type="text">
+                   </div>
+
+
+
+
+                    <div class="col-lg-10 col-lg-offset-2" align="right">
+
+                       <button type="button" value="enviar" onclick="javascript:enviarforms()">Finalizar</button>
+
+                    </div>
+
+                 </g:form>
+
+
+
+
+         </section>                

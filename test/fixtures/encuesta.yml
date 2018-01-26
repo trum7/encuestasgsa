@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  profesor: MyString
+  subject: MyString
+  student: MyString
+  p1: 1
+  p2: 1
+  p3: 1
+  p4: 1
+  p5: 1
+  p6: 1
+  p7: 1
+  p8: 1
+  p9: 1
+  p10: 1
+  p11: 1
+  p12: 1
+  p13: 1
+  p14: 1
+  p15: 1
+  p16: 1
+  p17: 1
+  p18: 1
+  p19: 1
+  p20: 1
+  p21: 1
+  p22: 1
+  p23: 1
+  p24: 1
+  bueno: MyString
+  mejorar: MyString
+
+two:
+  profesor: MyString
+  subject: MyString
+  student: MyString
+  p1: 1
+  p2: 1
+  p3: 1
+  p4: 1
+  p5: 1
+  p6: 1
+  p7: 1
+  p8: 1
+  p9: 1
+  p10: 1
+  p11: 1
+  p12: 1
+  p13: 1
+  p14: 1
+  p15: 1
+  p16: 1
+  p17: 1
+  p18: 1
+  p19: 1
+  p20: 1
+  p21: 1
+  p22: 1
+  p23: 1
+  p24: 1
+  bueno: MyString
+  mejorar: MyString
