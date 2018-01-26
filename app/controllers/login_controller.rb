@@ -9,23 +9,27 @@ class LoginController < ApplicationController
 
   def validate
 
-    code = params["username"]
+    user = params["username"]
     @password = params["password"]
     p "aca"
-    p code
+    p user
     p "aca consulta"
-    @student = Student.find_by(code: code)
+    @student = Student.find_by(code: user)
 
     if @student != nil and @student.code.to_s == @password
 
       puts "Siiiiiiii"
       @student.generate_token
-      @student = Student.where(code: @code).first
+      @student = Student.find_by(code: user)
       session["token"] = @student.token
 
       if @student.level == 1
         #puts 1
         redirect_to student_home_path
+
+      elsif @student.level == 4
+
+        redirect_to admin_home_path
 
       end
 

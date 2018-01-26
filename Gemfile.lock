@@ -69,6 +69,7 @@ GEM
     crass (1.0.3)
     erubi (1.7.0)
     execjs (2.7.0)
+    ffi (1.9.18)
     ffi (1.9.18-x64-mingw32)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -92,8 +93,11 @@ GEM
     minitest (5.11.2)
     multi_json (1.13.1)
     nio4r (2.2.0)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
     nokogiri (1.8.1-x64-mingw32)
       mini_portile2 (~> 2.3.0)
+    pg (0.21.0)
     pg (0.21.0-x64-mingw32)
     public_suffix (3.0.1)
     puma (3.11.2)
@@ -170,6 +174,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
