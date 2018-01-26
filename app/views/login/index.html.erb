@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+
+
+  <div class="row">
+      <div class="col-md-12 " align="center">
+        <br><br>
+        <h2> Encuestas de profesores GSA </h2>
+        <div class="col-md-2"></div>
+          <div class="col-md-8" style="text-align : center; padding: 6em" align="center">
+
+              <h1>Ingreso</h1>
+
+              <%= form_tag(controller: "login", action: "validate", method: "get") do |f| %>
+                  <div class="form-group">
+                      <div class="col-md-12" style="margin-bottom : 5px">
+                          <input class="form-control" id="inputEmail" name="username" placeholder="Codigo" type="text">
+                      </div>
+
+                      <div class="col-md-12" style="margin-bottom : 5px">
+                          <input class="form-control" name="password"  placeholder="Contraseña" type="password">
+                      </div>
+                         <div class="col-md-6" style="margin-bottom : 5px; text-align: left">
+
+
+                      </div>
+                      <div class="col-md-6" style="margin-bottom : 5px; text-align : right">
+                          <!--  <button class="btn btn-primary" type="submit">Log in</submit> -->
+                          <label>&nbsp;</label><input type="submit" name="Login"/>
+                      </div>
+                  </div>
+              <% end %>
+
+
+          </div>
+          <div class="col-md-2"></div>
+      </div>
+
+  </div>
+</div>

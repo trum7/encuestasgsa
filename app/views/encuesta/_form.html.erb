@@ -1,0 +1,162 @@
+<%= form_with(model: encuestum, local: true) do |form| %>
+  <% if encuestum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(encuestum.errors.count, "error") %> prohibited this encuestum from being saved:</h2>
+
+      <ul>
+      <% encuestum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :profesor %>
+    <%= form.text_field :profesor, id: :encuestum_profesor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_field :subject, id: :encuestum_subject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :student %>
+    <%= form.text_field :student, id: :encuestum_student %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p1 %>
+    <%= form.number_field :p1, id: :encuestum_p1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p2 %>
+    <%= form.number_field :p2, id: :encuestum_p2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p3 %>
+    <%= form.number_field :p3, id: :encuestum_p3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p4 %>
+    <%= form.number_field :p4, id: :encuestum_p4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p5 %>
+    <%= form.number_field :p5, id: :encuestum_p5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p6 %>
+    <%= form.number_field :p6, id: :encuestum_p6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p7 %>
+    <%= form.number_field :p7, id: :encuestum_p7 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p8 %>
+    <%= form.number_field :p8, id: :encuestum_p8 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p9 %>
+    <%= form.number_field :p9, id: :encuestum_p9 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p10 %>
+    <%= form.number_field :p10, id: :encuestum_p10 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p11 %>
+    <%= form.number_field :p11, id: :encuestum_p11 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p12 %>
+    <%= form.number_field :p12, id: :encuestum_p12 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p13 %>
+    <%= form.number_field :p13, id: :encuestum_p13 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p14 %>
+    <%= form.number_field :p14, id: :encuestum_p14 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p15 %>
+    <%= form.number_field :p15, id: :encuestum_p15 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p16 %>
+    <%= form.number_field :p16, id: :encuestum_p16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p17 %>
+    <%= form.number_field :p17, id: :encuestum_p17 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p18 %>
+    <%= form.number_field :p18, id: :encuestum_p18 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p19 %>
+    <%= form.number_field :p19, id: :encuestum_p19 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p20 %>
+    <%= form.number_field :p20, id: :encuestum_p20 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p21 %>
+    <%= form.number_field :p21, id: :encuestum_p21 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p22 %>
+    <%= form.number_field :p22, id: :encuestum_p22 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p23 %>
+    <%= form.number_field :p23, id: :encuestum_p23 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p24 %>
+    <%= form.number_field :p24, id: :encuestum_p24 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bueno %>
+    <%= form.text_field :bueno, id: :encuestum_bueno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mejorar %>
+    <%= form.text_field :mejorar, id: :encuestum_mejorar %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
